@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.origins.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["PlayerMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

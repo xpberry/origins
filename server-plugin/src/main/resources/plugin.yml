@@ -1,0 +1,17 @@
+name: ServerRaces
+version: '${version}'
+main: dev.serverraces.ServerRacesPlugin
+api-version: '1.20'
+author: xpBerry
+softdepend: [Geyser-Spigot, floodgate]
+commands:
+  race:
+    description: Select a race, open the race GUI, or use its ability.
+    usage: /race <gui|choose|ability|info>
+    aliases: [races]
+  ability:
+    description: Activate your selected race ability.
+    usage: /ability
+permissions:
+  serverraces.admin:
+    default: op

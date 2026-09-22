@@ -1,0 +1,50 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "ServerRaces",
+    "description": "Twelve-race selection system",
+    "uuid": "d4f3e9e0-74c0-4d32-a9b0-2c1f83b8b8e1",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "c7e5f9e5-bb9b-4b7c-9448-7b5a0d5e4e20",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "a0b6dd9b-60b3-4e0c-8f0c-34c2ef39a0f4",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.4.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.1.0"
+    }
+  ]
+}

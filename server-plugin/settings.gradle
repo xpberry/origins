@@ -1,0 +1,3 @@
+pluginManagement { repositories { gradlePluginPortal(); mavenCentral() } }
+dependencyResolutionManagement { repositories { mavenCentral(); maven { url = 'https://repo.papermc.io/repository/maven-public/' } } }
+rootProject.name = 'ServerRaces'

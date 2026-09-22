@@ -1,0 +1,121 @@
+{
+  "format_version": "1.20.0",
+  "animation_controllers": {
+    "controller.animation.origins.passives": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "dwarf": "q.has_tag('race:dwarf') && q.position(0, -1, 0).y < 60"
+            },
+            {
+              "mermaid": "q.has_tag('race:mermaid') && q.is_in_water"
+            },
+            {
+              "fairy": "q.has_tag('race:fairy')"
+            },
+            {
+              "celestid": "q.has_tag('race:celestid')"
+            },
+            {
+              "shadowkin": "q.has_tag('race:shadowkin')"
+            },
+            {
+              "arachnid": "q.has_tag('race:arachnid')"
+            },
+            {
+              "ignis": "q.has_tag('race:ignis')"
+            },
+            {
+              "golem": "q.has_tag('race:golem')"
+            }
+          ]
+        },
+        "dwarf": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:dwarf') || q.position(0, -1, 0).y >= 60"
+            }
+          ],
+          "on_entry": [
+            "/effect @s night_vision 12 0 true",
+            "/effect @s haste 2 0 true"
+          ]
+        },
+        "mermaid": {
+          "transitions": [
+            {
+              "default": "!q.is_in_water"
+            }
+          ],
+          "on_entry": [
+            "/effect @s water_breathing 12 0 true",
+            "/effect @s dolphins_grace 2 0 true"
+          ]
+        },
+        "fairy": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:fairy')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s slow_falling 2 0 true"
+          ]
+        },
+        "celestid": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:celestid')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s glowing 2 0 true"
+          ]
+        },
+        "shadowkin": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:shadowkin')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s night_vision 2 0 true",
+            "/effect @s speed 2 0 true"
+          ]
+        },
+        "arachnid": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:arachnid')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s speed 2 0 true"
+          ]
+        },
+        "ignis": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:ignis')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s fire_resistance 2 0 true"
+          ]
+        },
+        "golem": {
+          "transitions": [
+            {
+              "default": "!q.has_tag('race:golem')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s resistance 2 0 true"
+          ]
+        }
+      }
+    }
+  }
+}

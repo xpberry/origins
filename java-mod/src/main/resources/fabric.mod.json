@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "origins_races",
+  "version": "${version}",
+  "name": "Cross Edition Races",
+  "description": "Race and class selection system.",
+  "authors": ["Origins"],
+  "environment": "*",
+  "entrypoints": { "main": ["dev.origins.RacesMod"], "client": ["dev.origins.RacesClient"] },
+  "mixins": ["origins.mixins.json"],
+  "depends": { "fabricloader": ">=0.15.0", "minecraft": ">=1.20.4", "fabric-api": "*" }
+}

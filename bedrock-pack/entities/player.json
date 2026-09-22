@@ -1,0 +1,336 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+    "component_groups": {
+      "origins:dragonborn": {
+        "minecraft:fire_immune": {},
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "freezing",
+              "deals_damage": true,
+              "damage_multiplier": 1.5
+            }
+          ]
+        }
+      },
+      "origins:dwarf": {
+        "minecraft:movement": {
+          "value": 0.9
+        }
+      },
+      "origins:giant": {
+        "minecraft:health": {
+          "value": 30,
+          "max": 30
+        },
+        "minecraft:scale": {
+          "value": 1.5
+        }
+      },
+      "origins:warlock": {
+        "minecraft:health": {
+          "value": 16,
+          "max": 16
+        }
+      },
+      "origins:witch": {},
+      "origins:mermaid": {
+        "minecraft:breathable": {
+          "total_supply": 999999,
+          "suffocate_time": 0,
+          "breathes_water": true
+        }
+      },
+      "origins:fairy": {
+        "minecraft:health": {
+          "value": 12,
+          "max": 12
+        },
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:can_fly": {},
+        "minecraft:movement": {
+          "value": 0.12
+        }
+      },
+      "origins:fairy_flight": {
+        "minecraft:can_fly": {}
+      },
+      "origins:celestid": {
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fire",
+              "deals_damage": true,
+              "damage_multiplier": 1.5
+            },
+            {
+              "cause": "fire_tick",
+              "deals_damage": true,
+              "damage_multiplier": 1.5
+            }
+          ]
+        }
+      },
+      "origins:shadowkin": {
+        "minecraft:movement": {
+          "value": 0.12
+        }
+      },
+      "origins:arachnid": {
+        "minecraft:health": {
+          "value": 16,
+          "max": 16
+        },
+        "minecraft:movement": {
+          "value": 0.115
+        },
+        "minecraft:can_climb": {}
+      },
+      "origins:ignis": {
+        "minecraft:fire_immune": {},
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "drowning",
+              "deals_damage": true,
+              "damage_multiplier": 2.0
+            }
+          ]
+        }
+      },
+      "origins:golem": {
+        "minecraft:movement": {
+          "value": 0.07
+        },
+        "minecraft:knockback_resistance": {
+          "value": 1.0
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "drowning",
+              "deals_damage": false
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "player",
+          "origins_player"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      }
+    },
+    "events": {
+      "origins:clear": {
+        "remove": {
+          "component_groups": [
+            "origins:dragonborn",
+            "origins:dwarf",
+            "origins:giant",
+            "origins:warlock",
+            "origins:witch",
+            "origins:mermaid",
+            "origins:fairy",
+            "origins:fairy_flight",
+            "origins:celestid",
+            "origins:shadowkin",
+            "origins:arachnid",
+            "origins:ignis",
+            "origins:golem"
+          ]
+        }
+      },
+      "origins:dragonborn": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:dragonborn"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:dwarf": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:dwarf"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:giant": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:giant"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:warlock": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:warlock"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:witch": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:witch"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:mermaid": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:mermaid"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:fairy": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:fairy",
+                "origins:fairy_flight"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:fairy_flight": {
+        "add": {
+          "component_groups": [
+            "origins:fairy_flight"
+          ]
+        }
+      },
+      "origins:celestid": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:celestid"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:shadowkin": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:shadowkin"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:arachnid": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:arachnid"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:ignis": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:ignis"
+              ]
+            }
+          }
+        ]
+      },
+      "origins:golem": {
+        "sequence": [
+          {
+            "trigger": "origins:clear"
+          },
+          {
+            "add": {
+              "component_groups": [
+                "origins:golem"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
